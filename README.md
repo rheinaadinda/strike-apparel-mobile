@@ -1,16 +1,17 @@
-# strike_apparel
+1. Jelaskan apa itu widget tree pada Flutter dan bagaimana hubungan parent-child (induk-anak) bekerja antar widget.
+Widget tree dalam Flutter adalah struktur hierarki yang menggambarkan bagaimana seluruh widget tersusun di dalam aplikasi. Setiap elemen tampilan, seperti teks, gambar, tombol, dan layout, merupakan widget yang saling terhubung melalui hubungan parent-child (induk-anak). Widget induk bertanggung jawab mengatur tata letak dan perilaku widget anak, seperti posisi, ukuran, dan urutan tampilannya. Misalnya, sebuah Column dapat menjadi parent yang berisi beberapa child seperti Text dan ElevatedButton, yang disusun secara vertikal. Dengan cara ini, Flutter membangun antarmuka pengguna melalui kombinasi widget yang saling bersarang.
 
-A new Flutter project.
+2. Sebutkan semua widget yang kamu gunakan dalam proyek ini dan jelaskan fungsinya.
+Dalam proyek ini, terdapat beberapa widget yang digunakan dengan fungsinya masing-masing. Widget MaterialApp berperan sebagai kerangka utama aplikasi berbasis Material Design, sedangkan Scaffold menyediakan struktur halaman seperti AppBar dan body. Widget AppBar digunakan untuk menampilkan bagian atas halaman dengan judul aplikasi. Kemudian, Column dan Row digunakan untuk menyusun elemen secara vertikal dan horizontal. Container berfungsi sebagai pembungkus fleksibel yang dapat diatur ukuran, warna, dan jaraknya. Widget lain seperti Text digunakan untuk menampilkan teks, Image untuk menampilkan gambar, ElevatedButton untuk membuat tombol interaktif, dan Icon untuk menampilkan ikon. Semua widget tersebut bekerja sama membentuk tampilan antarmuka yang terstruktur dan interaktif.
 
-## Getting Started
+3. Apa fungsi dari widget MaterialApp? Jelaskan mengapa widget ini sering digunakan sebagai widget root.
+Widget MaterialApp memiliki fungsi utama sebagai pembungkus seluruh aplikasi yang menggunakan gaya Material Design. Widget ini mengatur elemen penting seperti judul aplikasi, tema (warna, font, dan gaya), serta navigasi antar halaman. MaterialApp sering digunakan sebagai widget root karena menyediakan konteks global yang memungkinkan widget lain seperti Scaffold, AppBar, dan FloatingActionButton berfungsi dengan benar. Dengan menjadikannya widget root, aplikasi Flutter dapat menggunakan sistem desain Material secara konsisten di seluruh halaman.
 
-This project is a starting point for a Flutter application.
+4. Jelaskan perbedaan antara StatelessWidget dan StatefulWidget. Kapan kamu memilih salah satunya?
+Perbedaan utama antara StatelessWidget dan StatefulWidget terletak pada kemampuan mereka dalam menampung dan mengelola data yang berubah. StatelessWidget bersifat statis, artinya tampilannya tidak berubah selama aplikasi berjalan; cocok digunakan untuk elemen yang tidak membutuhkan pembaruan, seperti teks atau ikon. Sebaliknya, StatefulWidget memiliki state yang dapat berubah dan dapat memperbarui tampilannya menggunakan metode setState(). Widget jenis ini digunakan ketika ada interaksi pengguna atau data yang dinamis, seperti tombol counter, input form, atau tampilan yang bergantung pada data API. Dengan demikian, pemilihan di antara keduanya tergantung pada kebutuhan perubahan data dalam tampilan aplikasi.
 
-A few resources to get you started if this is your first Flutter project:
+5. Apa itu BuildContext dan mengapa penting di Flutter? Bagaimana penggunaannya di metode build?
+BuildContext adalah objek yang merepresentasikan posisi suatu widget di dalam widget tree. Objek ini penting karena memungkinkan widget untuk berinteraksi dengan widget lain di atasnya (ancestor), misalnya untuk mengambil tema menggunakan Theme.of(context) atau melakukan navigasi melalui Navigator.of(context). Dalam metode build(), BuildContext digunakan untuk menentukan bagaimana tampilan widget dibangun berdasarkan lingkungan atau posisi widget tersebut dalam hierarki aplikasi. Dengan kata lain, BuildContext menjadi penghubung antara widget dengan struktur keseluruhan aplikasi Flutter.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+6. Jelaskan konsep "hot reload" di Flutter dan bagaimana bedanya dengan "hot restart".
+Konsep Hot Reload dalam Flutter memungkinkan pengembang untuk melihat perubahan kode secara langsung tanpa harus menghentikan aplikasi, dan tanpa kehilangan state atau data yang sedang berjalan. Fitur ini sangat berguna ketika melakukan penyesuaian pada tampilan UI atau logika kecil secara cepat. Sementara itu, Hot Restart akan memulai ulang seluruh aplikasi dari awal dan menghapus semua state yang tersimpan, seolah-olah aplikasi baru dijalankan kembali. Perbedaan utamanya adalah Hot Reload mempertahankan kondisi aplikasi, sedangkan Hot Restart mengembalikan aplikasi ke keadaan awal.
