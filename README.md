@@ -1,3 +1,5 @@
+NOTE: Maaf kak sebenernya tugas 7 saya ga ngumpul telat, minggu lalu udah selesai tapi salah push malah ke github repo football-news-mobile, push yang sekarang memperbaiki commitnya aja #peace #pls jgn dikurangin huhu
+
 1. Jelaskan apa itu widget tree pada Flutter dan bagaimana hubungan parent-child (induk-anak) bekerja antar widget.
 Widget tree dalam Flutter adalah struktur hierarki yang menggambarkan bagaimana seluruh widget tersusun di dalam aplikasi. Setiap elemen tampilan, seperti teks, gambar, tombol, dan layout, merupakan widget yang saling terhubung melalui hubungan parent-child (induk-anak). Widget induk bertanggung jawab mengatur tata letak dan perilaku widget anak, seperti posisi, ukuran, dan urutan tampilannya. Misalnya, sebuah Column dapat menjadi parent yang berisi beberapa child seperti Text dan ElevatedButton, yang disusun secara vertikal. Dengan cara ini, Flutter membangun antarmuka pengguna melalui kombinasi widget yang saling bersarang.
 
