@@ -1,5 +1,31 @@
 NOTE: Maaf kak sebenernya tugas 7 saya ga ngumpul telat, minggu lalu udah selesai tapi salah push malah ke github repo football-news-mobile, push yang sekarang memperbaiki commitnya aja #peace #pls jgn dikurangin huhu
 
+Tugas 8
+
+Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement() pada Flutter. Dalam kasus apa sebaiknya masing-masing digunakan pada aplikasi Football Shop kamu?
+Navigator.push() --> Menambahkan halaman baru di atas stack navigasi tanpa menghapus halaman sebelumnya. Di aplikasi Football Shop, fungsi ini cocok untuk navigasi yang tidak menggantikan halaman utama, misalnya saat pengguna menekan tombol “Detail Produk” dari halaman katalog. Jadi, ketika pengguna klik tombol back, ia bisa balik.
+
+Navigator.pushReplacement() --> Mengganti halaman saat ini dengan halaman baru sehingga halaman sebelumnya dihapus dari stack. Di aplikasi Football Shop, fungsi ini cocok untuk navigasi setelah proses login atau checkout sukses, di mana pengguna tidak perlu kembali ke halaman sebelumnya. Jadi, pengguna tidak bisa kembali ke halaman sebelumnya dengan tombol back.
+
+Bagaimana kamu memanfaatkan hierarchy widget seperti Scaffold, AppBar, dan Drawer untuk membangun struktur halaman yang konsisten di seluruh aplikasi?
+Scaffold --> Memberikan struktur dasar halaman seperti body, AppBar, Drawer, dan FloatingActionButton. Di Football Shop, ini membantu menjaga tampilan halaman tetap seragam.
+
+AppBar --> Berfungsi sebagai header halaman, menampilkan judul, ikon pencarian, atau keranjang belanja.
+
+Drawer --> Menyediakan navigasi global antarhalaman seperti Home, Kategori, dan Profil. Dengan ini, pengguna bisa berpindah antarhalaman dengan mudah tanpa mengubah struktur utama.
+
+Dalam konteks desain antarmuka, apa kelebihan menggunakan layout widget seperti Padding, SingleChildScrollView, dan ListView saat menampilkan elemen-elemen form? Berikan contoh penggunaannya dari aplikasi kamu.
+Padding --> Menambah jarak antar elemen agar tampilan lebih rapi dan mudah dibaca.
+
+SingleChildScrollView --> Membuat halaman bisa di-scroll ketika konten lebih panjang dari layar, terutama untuk form checkout atau registrasi.
+
+ListView --> Digunakan untuk menampilkan daftar item seperti list produk, keranjang belanja, atau riwayat pesanan.
+
+Bagaimana kamu menyesuaikan warna tema agar aplikasi Football Shop memiliki identitas visual yang konsisten dengan brand toko?
+Saya memanfaatkan ThemeData di MaterialApp untuk menentukan warna utama, sekunder, dan gaya teks agar mencerminkan identitas brand Football Shop saya. Dengan begitu, seluruh komponen (AppBar, tombol, ikon, teks) mengikuti identitas visual yang konsisten dengan citra Football Shop saya.
+
+
+Tugas 7
 1. Jelaskan apa itu widget tree pada Flutter dan bagaimana hubungan parent-child (induk-anak) bekerja antar widget.
 Widget tree dalam Flutter adalah struktur hierarki yang menggambarkan bagaimana seluruh widget tersusun di dalam aplikasi. Setiap elemen tampilan, seperti teks, gambar, tombol, dan layout, merupakan widget yang saling terhubung melalui hubungan parent-child (induk-anak). Widget induk bertanggung jawab mengatur tata letak dan perilaku widget anak, seperti posisi, ukuran, dan urutan tampilannya. Misalnya, sebuah Column dapat menjadi parent yang berisi beberapa child seperti Text dan ElevatedButton, yang disusun secara vertikal. Dengan cara ini, Flutter membangun antarmuka pengguna melalui kombinasi widget yang saling bersarang.
 
