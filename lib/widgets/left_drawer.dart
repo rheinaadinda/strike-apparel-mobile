@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:strike_apparel/screens/menu.dart';
 import 'package:strike_apparel/screens/productlist_form.dart';
+import 'package:strike_apparel/screens/product_entry_list.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -18,7 +19,7 @@ class LeftDrawer extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'Dribble Zone',
+                  'Strike Apparel',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30,
@@ -65,8 +66,17 @@ class LeftDrawer extends StatelessWidget {
                   ));
             },
           ),
-          // TODO: Buat ListTile baru untuk ke halaman melihat product
-          
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('Product List'),
+            onTap: () {
+                // Route to news list page
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ProductEntryListPage()),
+                );
+            },
+          ),
         ],
       ),
     );
